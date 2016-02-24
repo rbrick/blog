@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}{{ post.title }} - {{ post.id }} by {{ post.author }} {% endblock %}
+
+{% block content %}
+<div id="blog-area">
+    <div class="header">
+        <h1>{{ post.title }}</h1>
+        <h3>by {{ post.author }} @ {{ post.formatted_date }}</h3>
+        <div class="border"></div>
+    </div>
+    <div id="blogBody">
+        <div class="text">
+            {{ post.formatted_body }}
+        </div>
+    </div>
+</div>
+{% endblock %}
